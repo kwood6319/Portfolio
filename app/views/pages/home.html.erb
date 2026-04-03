@@ -1,39 +1,197 @@
-<div class="header border mb-3 row">
-  <div class="col-4">
-    Insert pic
+<div class="container mt-5">
+  <!-- HEADER -->
+  <div class="header row align-items-center p-4 mb-5 rounded shadow-sm">
+    <div class="col-md-3 text-center">
+      <%= image_tag "main pic.jpg", alt: "Katie", class: "profilepic" %>
+    </div>
+    <div class="col-md-9 text-center text-md-start">
+      <h1 class="fw-bold mb-1">Katie</h1>
+      <h4 class="mb-2 role">Full Stack Developer</h4>
+      <p class="mb-3">
+        Passionate developer who enjoys building scalable web applications
+        and learning new technologies.
+      </p>
+      <div class="skills">
+        <span class="badge skill-badge">Ruby</span>
+        <span class="badge skill-badge">Rails</span>
+        <span class="badge skill-badge">HTML</span>
+        <span class="badge skill-badge">CSS</span>
+        <span class="badge skill-badge">PostgreSQL</span>
+      </div>
+    </div>
   </div>
-  <div class="col-8 justify-content-center">
-    <h1> Katie Wood </h1>
-    <h2> Full Stack Developer </h2>
-    <h3> Biobiobiobio </h3>
-    <h4> Ruby | Rails | HTML | CSS </h4>
+  <!-- ABOUT -->
+  <div class="abt-me p-4 mb-5 rounded shadow-sm">
+    <div class="row align-items-center">
+      <!-- TEXT -->
+      <div class="col-md-7">
+        <h3 class="section-title">About Me</h3>
+        <p>
+          I’m a Full Stack Developer based in Japan with a background in teaching.
+          I enjoy solving problems, building user-friendly applications, and continuously improving my skills.
+        </p>
+      </div>
+      <!-- IMAGE PLACEHOLDER -->
+      <div class="col-md-5 text-center">
+        <div class="img-placeholder">
+          Image here
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PROJECTS -->
+  <div class="myproj p-4 rounded shadow-sm mb-5">
+    <h3 class="section-title mb-4">Projects</h3>
+    <!-- PROJECT CARD -->
+    <div class="project-card row mb-4 align-items-center">
+      <!-- IMAGE -->
+      <div class="col-md-4 text-center">
+        <div class="img-placeholder">
+          Project Image
+        </div>
+      </div>
+      <!-- DETAILS -->
+      <div class="col-md-8">
+        <h5>Classroom Library</h5>
+        <p>
+          A web app for managing classroom books and student loans.
+          Built with Ruby on Rails and PostgreSQL.
+        </p>
+        <a href="#" class="btn project-btn me-2">GitHub</a>
+        <a href="#" class="btn project-btn-outline">Details</a>
+      </div>
+    </div>
+    <!-- PROJECT CARD -->
+    <div class="project-card row mb-4 align-items-center">
+      <div class="col-md-4 text-center">
+        <div class="img-placeholder">
+          Project Image
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h5>ConnectPet</h5>
+        <p>
+          A platform for connecting pet owners with services and communities.
+        </p>
+        <a href="#" class="btn project-btn me-2">GitHub</a>
+        <a href="#" class="btn project-btn-outline">Details</a>
+      </div>
+    </div>
+    <!-- PROJECT CARD -->
+    <div class="project-card row align-items-center">
+      <div class="col-md-4 text-center">
+        <div class="img-placeholder">
+          Project Image
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h5>GanbaAI</h5>
+        <p>
+          An AI-powered productivity assistant designed to keep users motivated.
+        </p>
+        <a href="#" class="btn project-btn me-2">GitHub</a>
+        <a href="#" class="btn project-btn-outline">Details</a>
+      </div>
+    </div>
   </div>
 </div>
-<div class="abt-me">
-  <h3> About me </h3>
-  <p> Blablablal </p>
-</div>
-<div class="myproj">
-  <h3> My projects </h3>
-  <h5> Classroom Library </h5>
-  <p> Blablabla </p>
-  <br>
-  <h5> connectPet </h5>
-  <p> Blablabla </p>
-  <br>
-  <h5> GanbaAI </h5>
-  <p> Blablabla </p>
-</div>
+<!-- FOOTER -->
+<footer class="footer text-center p-4">
+  <p class="mb-2">Connect with me</p>
+  <a href="#" class="footer-link">GitHub</a> |
+  <a href="#" class="footer-link">LinkedIn</a>
+</footer>
 <style>
-  .header {
-    background: #90BEDE;
-  }
-  .abt-me {
-    background: #E5E1EE;
-  }
-  .myproj {
-    background: #E5E1EE;
+  body {
+    background-color: #E5E1EE;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   }
 
-  /* #68EDC6 */
+  /* HEADER */
+  .header {
+    background: #90BEDE;
+    color: #fff;
+  }
+
+  .role {
+    color: #E5E1EE;
+  }
+
+  /* PROFILE IMAGE (square rounded) */
+  .profilepic {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #68EDC6;
+  }
+
+  /* SECTIONS */
+  .abt-me, .myproj {
+    background: #ffffff;
+    border-left: 6px solid #68EDC6;
+  }
+
+  .section-title {
+    color: #90BEDE;
+    font-weight: bold;
+  }
+
+  /* PLACEHOLDER IMAGES */
+  .img-placeholder {
+    width: 100%;
+    height: 150px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  /* PROJECT CARDS */
+  .project-card {
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+  }
+
+  .project-card:hover {
+    background: #f9f9f9;
+    transform: translateY(-4px);
+  }
+
+  /* BUTTONS */
+  .project-btn {
+    background: #68EDC6;
+    border: none;
+    color: #000;
+  }
+
+  .project-btn-outline {
+    border: 1px solid #90BEDE;
+    color: #90BEDE;
+    background: transparent;
+  }
+
+  /* SKILLS */
+  .skill-badge {
+    background-color: #68EDC6;
+    color: #000;
+    margin-right: 6px;
+    padding: 6px 10px;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: #90BEDE;
+    color: #fff;
+  }
+
+  .footer-link {
+    color: #68EDC6;
+    text-decoration: none;
+    margin: 0 5px;
+  }
 </style>
