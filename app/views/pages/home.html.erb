@@ -2,16 +2,17 @@
   <!-- ABOUT -->
   <div class="abt-me p-4 mb-5 rounded shadow-sm">
     <div class="row align-items-center">
+      <!-- IMAGE (comes first on mobile, second on desktop) -->
+      <div class="col-md-5 text-center order-1 order-md-2">
+        <%= image_tag "cats.jpg", alt: "3 cats, 2 black, 1 orange", class: "about-image" %>
+      </div>
       <!-- TEXT -->
-      <div class="col-md-7">
+      <div class="col-md-7 order-2 order-md-1">
         <h3 class="section-title">About Me</h3>
         <p>
           I'm a Full Stack Developer based in Japan with a background in teaching.
           I enjoy solving problems, building user-friendly applications, and continuously improving my skills.
         </p>
-      </div>
-      <div class="col-md-5 text-center">
-        <%= image_tag "cats.jpg", alt: "3 cats, 2 black, 1 orange", class: "about-image" %>
       </div>
     </div>
   </div>
