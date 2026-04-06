@@ -2,23 +2,17 @@
 <html>
   <head>
     <title><%= content_for(:title) || "Portfolio" %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Portfolio">
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= yield :head %>
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <div class="header d-flex align-items-center p-4 mb-5 rounded shadow-sm">
-      <!-- IMAGE (always left) -->
+    <!-- HEADER -->
+    <div class="header d-flex align-items-center p-4 mb-4 shadow-sm">
+      <!-- IMAGE -->
       <div class="me-4">
         <%= image_tag "main pic.jpg", alt: "Katie", class: "profilepic" %>
       </div>
@@ -27,8 +21,8 @@
         <h1 class="fw-bold mb-1">Katie</h1>
         <h4 class="mb-2 role">Full Stack Developer</h4>
         <p class="mb-3">
-          Passionate developer who enjoys building scalable web applications
-          and learning new technologies.
+          Full Stack Developer specializing in Ruby on Rails,
+          building practical and user-friendly web applications.
         </p>
         <div class="skills">
           <span class="badge skill-badge">Ruby</span>
@@ -39,12 +33,15 @@
         </div>
       </div>
     </div>
-  </div>
-  <%= yield %>
-  <footer class="footer text-center p-3 mt-auto">
-    <p class="mb-2">Connect with me</p>
-    <a href="#" class="footer-link">GitHub</a> |
-    <a href="#" class="footer-link">LinkedIn</a>
-  </footer>
-</body>
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <%= yield %>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer text-center p-3 mt-auto">
+      <p class="mb-2">Connect with me</p>
+      <a href="#" class="footer-link">GitHub</a> |
+      <a href="#" class="footer-link">LinkedIn</a>
+    </footer>
+  </body>
 </html>

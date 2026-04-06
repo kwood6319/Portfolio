@@ -6,15 +6,12 @@
       <div class="col-md-7">
         <h3 class="section-title">About Me</h3>
         <p>
-          I’m a Full Stack Developer based in Japan with a background in teaching.
+          I'm a Full Stack Developer based in Japan with a background in teaching.
           I enjoy solving problems, building user-friendly applications, and continuously improving my skills.
         </p>
       </div>
-      <!-- IMAGE PLACEHOLDER -->
       <div class="col-md-5 text-center">
-        <div class="img-placeholder">
-          Image here
-        </div>
+        <%= image_tag "cats.jpg", alt: "3 cats, 2 black, 1 orange", class: "about-image" %>
       </div>
     </div>
   </div>
@@ -25,9 +22,7 @@
     <div class="project-card row mb-4 align-items-center">
       <!-- IMAGE -->
       <div class="col-md-4 text-center">
-        <div class="img-placeholder">
-          Project Image
-        </div>
+        <%= image_tag "cats.jpg", alt: "3 cats, 2 black, 1 orange", class: "about-image" %>
       </div>
       <!-- DETAILS -->
       <div class="col-md-8">
@@ -40,15 +35,13 @@
         <a href="#" class="btn project-btn-outline">Details</a>
       </div>
     </div>
-    <!-- PROJECT CARD -->
+    <!-- connectPet -->
     <div class="project-card row mb-4 align-items-center">
-      <div class="col-md-4 text-center">
-        <div class="img-placeholder">
-          Project Image
-        </div>
+      <div class="col-md-3 text-center">
+        <%= image_tag "connectPet.png", alt: "connectPet logo", class: "project-logo" %>
       </div>
-      <div class="col-md-8">
-        <h5>ConnectPet</h5>
+      <div class="col-md-9">
+        <h5>connectPet</h5>
         <p>
           A platform for connecting pet owners with services and communities.
         </p>
@@ -56,12 +49,10 @@
         <a href="#" class="btn project-btn-outline">Details</a>
       </div>
     </div>
-    <!-- PROJECT CARD -->
+    <!-- GanbaAI -->
     <div class="project-card row align-items-center">
       <div class="col-md-4 text-center">
-        <div class="img-placeholder">
-          Project Image
-        </div>
+        <%= image_tag "GanbaAI.jpg", alt: "GanbaAI logo", class: "project-logo" %>
       </div>
       <div class="col-md-8">
         <h5>GanbaAI</h5>
