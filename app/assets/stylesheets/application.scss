@@ -36,10 +36,10 @@ body {
 }
 
 .profilepic {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 40px;
 }
 
 .skill-badge {
@@ -121,4 +121,12 @@ body {
   border: 1px solid #90BEDE;
   color: #90BEDE;
   background: transparent;
+}
+
+a{
+  color: #E5E1EE;
+}
+
+a:hover{
+  color: black;
 }
