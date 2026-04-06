@@ -10,42 +10,6 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <!-- HEADER -->
-    <div class="header d-flex align-items-center p-4 mb-4 shadow-sm">
-      <!-- IMAGE -->
-      <div class="row">
-        <div class="col">
-          <div class="row justify-content-center">
-            <%= image_tag "main pic.jpg", alt: "Katie", class: "profilepic" %>
-          </div>
-          <div class="row mt-3 justify-content-center">
-            <div class="col-2 me-2 text-center">
-              <%= link_to "https://google.com", target: "_blank" do %>
-                <i class="fa-brands fa-github fa-2xl"></i>
-              <% end %>
-            </div>
-            <div class="col-2 text-center">
-              <%= link_to "https://google.com", target: "_blank" do %>
-                <i class="fa-brands fa-linkedin fa-2xl"></i>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <h1 class="fw-bold mb-1"> Katie </h1>
-          <h4 class="mb-2 role"> Full Stack Developer </h4>
-          <p class="mb-3">
-            Full Stack Developer specializing in Ruby on Rails,
-            building practical and user-friendly web applications.
-          </p>
-          <span class="badge skill-badge">Ruby</span>
-          <span class="badge skill-badge">Rails</span>
-          <span class="badge skill-badge">HTML</span>
-          <span class="badge skill-badge">CSS</span>
-          <span class="badge skill-badge">PostgreSQL</span>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <%= yield %>
     </div>
