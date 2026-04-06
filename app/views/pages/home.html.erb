@@ -1,67 +1,50 @@
-<div class="container mt-5">
-  <!-- ABOUT -->
-  <div class="abt-me p-4 mb-5 rounded shadow-sm">
-    <div class="row align-items-center">
-      <!-- TEXT -->
-      <div class="col-md-7">
-        <h3 class="section-title">About Me</h3>
-        <p>
-          I'm a Full Stack Developer based in Japan with a background in teaching.
-          I enjoy solving problems, building user-friendly applications, and continuously improving my skills.
-        </p>
-      </div>
-      <div class="col-md-5 text-center">
-        <%= image_tag "cats.jpg", alt: "3 cats, 2 black, 1 orange", class: "about-image" %>
+<!-- NAVBAR PARTIAL -->
+<%= render "shared/navbar" %>
+<!-- HEADER -->
+<section class="header">
+  <div class="header-content">
+    <div class="header-image">
+      <%= image_tag "main pic.jpg", alt: "Katie", class: "profilepic mb-3" %>
+    </div>
+    <div class="header-text">
+      <h1>Katie Wood</h1>
+      <h2>Full Stack Developer</h2>
+      <p>I'm a Full Stack Developer based in Japan with a background in teaching.
+        I enjoy solving problems, building user-friendly applications, and continuously improving my skills.</p>
+      <div class="skills">
+        <span class="pill">Ruby</span>
+        <span class="pill">Rails</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">HTML</span>
+        <span class="pill">CSS</span>
       </div>
     </div>
   </div>
-  <!-- PROJECTS -->
-  <div class="myproj p-4 rounded shadow-sm mb-5">
-    <h3 class="section-title mb-4">Projects</h3>
-    <!-- PROJECT CARD -->
-    <div class="project-card row mb-4 align-items-center">
-      <!-- IMAGE -->
-      <div class="col-md-4 text-center">
-        <%= image_tag "cats.jpg", alt: "3 cats, 2 black, 1 orange", class: "about-image" %>
+</section>
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <% 6.times do |i| %>
+      <div class="project-card">
+        <div class="project-image">Image</div>
+        <h3>Project <%= i + 1 %></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="project-links">
+          <a href="#" class="btn">Repo</a>
+          <a href="#" class="btn-outline">Details</a>
+        </div>
       </div>
-      <!-- DETAILS -->
-      <div class="col-md-8">
-        <h5>Classroom Library</h5>
-        <p>
-          A web app for managing classroom books and student loans.
-          Built with Ruby on Rails and PostgreSQL.
-        </p>
-        <a href="#" class="btn project-btn me-2">GitHub</a>
-        <a href="#" class="btn project-btn-outline">Details</a>
-      </div>
-    </div>
-    <!-- connectPet -->
-    <div class="project-card row mb-4 align-items-center">
-      <div class="col-md-3 text-center">
-        <%= image_tag "connectPet.png", alt: "connectPet logo", class: "project-logo" %>
-      </div>
-      <div class="col-md-9">
-        <h5>connectPet</h5>
-        <p>
-          A platform for connecting pet owners with services and communities.
-        </p>
-        <a href="#" class="btn project-btn me-2">GitHub</a>
-        <a href="#" class="btn project-btn-outline">Details</a>
-      </div>
-    </div>
-    <!-- GanbaAI -->
-    <div class="project-card row align-items-center">
-      <div class="col-md-4 text-center">
-        <%= image_tag "GanbaAI.jpg", alt: "GanbaAI logo", class: "project-logo" %>
-      </div>
-      <div class="col-md-8">
-        <h5>GanbaAI</h5>
-        <p>
-          An AI-powered productivity assistant designed to keep users motivated.
-        </p>
-        <a href="#" class="btn project-btn me-2">GitHub</a>
-        <a href="#" class="btn project-btn-outline">Details</a>
-      </div>
-    </div>
+    <% end %>
   </div>
-</div>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
