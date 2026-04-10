@@ -19,25 +19,16 @@
   </section>
   <!-- STAGES -->
   <section class="project-stages">
-    <% stages = [
-      "Design Stage",
-      "Schema Stage",
-      "Prototyping Stage",
-      "Development Stage",
-      "Testing Stage",
-      "Future Changes"
-    ] %>
-    <% stages.each do |stage| %>
+    <% @stages.each do |stage| %>
       <div class="stage-card">
-        <h2><%= stage %></h2>
+        <h2><%= stage.title %></h2>
         <div class="stage-content">
           <div class="stage-image">
             <div class="image-placeholder">Image</div>
           </div>
           <div class="stage-text">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <%= stage.description %>
             </p>
           </div>
         </div>
