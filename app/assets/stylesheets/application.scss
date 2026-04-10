@@ -270,6 +270,109 @@ button:hover {
   opacity: 0.85;
 }
 
+/* PROJECT SHOW PAGE */
+
+.project-show {
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+/* HEADER */
+.project-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-size {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+/* DESCRIPTION */
+.project-description {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* STAGES */
+.project-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stage-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.stage-card h2 {
+  margin-bottom: 1rem;
+  color: #90BEDE;
+}
+
+/* CONTENT LAYOUT */
+.stage-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* IMAGE (same logic as project cards) */
+.stage-image {
+  flex: 1;
+  min-width: 250px;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.stage-text {
+  flex: 2;
+}
+
+/* BACK LINK */
+.back-link {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stage-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 

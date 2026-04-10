@@ -1,3 +1,51 @@
-<div class="container">
-  Show for <%= @project.title %>
+<div class="project-show">
+  <!-- HEADER -->
+  <section class="project-header">
+    <h1><%= @project.title %></h1>
+    <div class="project-meta">
+      <div class="skills">
+        <%# Example: @project.skills could be an array later %>
+        <span class="pill">Ruby</span>
+        <span class="pill">Rails</span>
+        <span class="pill">PostgreSQL</span>
+      </div>
+      <div class="team-size">
+        <strong>Team Size:</strong> 3
+      </div>
+    </div>
+    <p class="project-description">
+      <%= @project.description %>
+    </p>
+  </section>
+  <!-- STAGES -->
+  <section class="project-stages">
+    <% stages = [
+      "Design Stage",
+      "Schema Stage",
+      "Prototyping Stage",
+      "Development Stage",
+      "Testing Stage",
+      "Future Changes"
+    ] %>
+    <% stages.each do |stage| %>
+      <div class="stage-card">
+        <h2><%= stage %></h2>
+        <div class="stage-content">
+          <div class="stage-image">
+            <div class="image-placeholder">Image</div>
+          </div>
+          <div class="stage-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </section>
+  <!-- BACK LINK -->
+  <div class="back-link">
+    <%= link_to "← Back to Projects", root_path, class: "btn-outline" %>
+  </div>
 </div>
