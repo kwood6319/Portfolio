@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :projects, only: [:show]
+
+  post "/contact", to: "contacts#create"
 end
