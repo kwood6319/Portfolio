@@ -1,17 +1,29 @@
 <div class="project-show">
   <!-- HEADER -->
   <section class="project-header">
+    <div class="header-image">
+      <div class="project-image">
+        <% image_name = "#{@project.title}.jpg" %>
+        <% if asset_exists?(image_name) %>
+          <%= image_tag image_name %>
+        <% else %>
+          <div class="image-placeholder">Image</div>
+        <% end %>
+      </div>
+    </div>
     <h1><%= @project.title %></h1>
+    <!-- SKILLS -->
     <div class="project-meta">
       <div class="skills">
-        <%# Example: @project.skills could be an array later %>
-        <span class="pill">Ruby</span>
-        <span class="pill">Rails</span>
-        <span class="pill">PostgreSQL</span>
+        <% @project.skills&.each do |skill| %>
+          <span class="pill"><%= skill %></span>
+        <% end %>
       </div>
-      <div class="team-size">
-        <strong>Team Size:</strong> 3
-      </div>
+    </div>
+    <!-- EXTRA INFO -->
+    <div class="project-extra">
+      <p><strong>Team Size:</strong> <%= @project.team_size %></p>
+      <p><strong>Role:</strong> <%= @project.role %></p>
     </div>
     <p class="project-description">
       <%= @project.description %>
@@ -23,13 +35,18 @@
       <div class="stage-card">
         <h2><%= stage.title %></h2>
         <div class="stage-content">
+          <!-- IMAGE -->
           <div class="stage-image">
-            <div class="image-placeholder">Image</div>
+            <% image_name = "#{@project.title}#{stage.title}.jpg" %>
+            <% if asset_exists?(image_name) %>
+              <%= image_tag image_name %>
+            <% else %>
+              <div class="image-placeholder">Image</div>
+            <% end %>
           </div>
+          <!-- TEXT -->
           <div class="stage-text">
-            <p>
-              <%= stage.description %>
-            </p>
+            <p><%= stage.description %></p>
           </div>
         </div>
       </div>
@@ -38,5 +55,6 @@
   <!-- BACK LINK -->
   <div class="back-link">
     <%= link_to "← Back to Projects", root_path, class: "btn-outline" %>
+    <%= link_to "Visit the GitHub repo →", "#{@project.link}", class: "btn", target: :_blank %>
   </div>
 </div>

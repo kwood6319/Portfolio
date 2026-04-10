@@ -16,25 +16,25 @@ ganba = Project.create!(
 
 Stage.create!(
   title: "Design",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "eeee",
   project: ganba
 )
 
 Stage.create!(
   title: "Schema",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "eeeee",
   project: ganba
 )
 
 Stage.create!(
   title: "Wireframing",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "eeeeee",
   project: ganba
 )
 
 Stage.create!(
   title: "Development",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "eeeee",
   project: ganba
 )
 
@@ -63,37 +63,49 @@ connect = Project.create!(
 
 Stage.create!(
   title: "Design",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "As a person with three pets in Japan, there are many difficulties. First, keeping track of what is happening with each of them.
+    I'm fortunate that my cats don't need to take medicine but I do need to keep track of when my cats go to the toilet and have stomach issues.
+    I needed a way to collate all of this data with accurate timestamps and be able to send it to my vet so I don't have to explain everything myself.
+    I speak Japanese but medical Japanese is another story.",
   project: connect
 )
 
 Stage.create!(
   title: "Schema",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "It was my first time designing such a complicated schema. We needed to have two different types of users; the owners and the vets.
+    Each owner might have multiple pets. Then, each pet might have multiple things they need to keep track of.
+    Though it isn't very scalable, we decided to add attributes to the pet database in order to make it in time for our MVP presentation.
+    We also added a chat feature and for that to work, we added a chat and messages section to our schema. Each message will be saved to the database.",
   project: connect
 )
 
 Stage.create!(
   title: "Wireframing",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "I'm not particularly good at front-end design and we only had a day to work on this, but we did our best to wireframe our app.
+    Though the final app looked a lot different, it helped to give us an idea of what to create for our app.
+    We later decided we didn't like the amount of colours -- it didn't lead to a professional looking app.",
   project: connect
 )
 
 Stage.create!(
   title: "Development",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "We worked on the project from Feb 8th to March 13th. A total of 362 commits were made to the project. It was tiring but well worth it.
+    We faced several challenges -- we had to make several migrations to our database because we hadn't considered some things.
+    We had an issue with our data not exporting properly in Japanese. I also had to struggle a lot with the chat feature and using JavaScript.",
   project: connect
 )
 
 Stage.create!(
   title: "Testing",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "Though the project works well for the one user, other users and vets don't see the expected behaviour.
+    Considering we only had so much development time, it's inevitable for these things to happen.",
   project: connect
 )
 
 Stage.create!(
   title: "Future Changes",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "In the near future, I'm going to continue working on this project with my group mates and two more members.
+    We're going to work out the kinks and get the app ready for production.",
   project: connect
 )
 
