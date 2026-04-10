@@ -58,9 +58,8 @@ body {
 }
 
 /* NAV ICONS (hidden on desktop) */
-.nav-icon {
-  display: none;
-  font-size: 1.2rem;
+.nav-links .nav-icon {
+  display: none !important;
 }
 
 .nav-text {
@@ -263,8 +262,9 @@ button:hover {
     display: none;
   }
 
-  .nav-icon {
-    display: inline;
+  .nav-links .nav-icon {
+    display: inline-block !important;
+    font-size: 1.2rem;
   }
 
   /* HEADER IMAGE ON TOP */
