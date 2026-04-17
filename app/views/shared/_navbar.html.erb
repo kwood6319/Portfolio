@@ -1,6 +1,8 @@
 <nav class="navbar">
   <div class="nav-container">
-    <div class="logo">Katie Wood</div>
+    <div class="logo">
+      <a href="/">Katie Wood</a>
+    </div>
     <ul class="nav-links">
       <li>
         <a href="#projects">
@@ -9,10 +11,10 @@
         </a>
       </li>
       <li>
-        <a href="#link1">
+        <%= link_to "https://www.linkedin.com/in/katie-wood6319/", target: :_blank do %>
           <i class="nav-icon fa-brands fa-linkedin"></i>
           <span class="nav-text">LinkedIn</span>
-        </a>
+        <% end %>
       </li>
       <li>
         <a href="#link2">
@@ -20,12 +22,12 @@
           <span class="nav-text">GitHub</span>
         </a>
       </li>
-      <li>
-        <a href="#contact">
-          <i class="nav-icon fa-regular fa-envelope"></i>
-          <span class="nav-text">Contact Me</span>
-        </a>
-      </li>
+      <%# <li> %>
+      <%# <a href="#contact"> %>
+      <%# <i class="nav-icon fa-regular fa-envelope"></i> %>
+      <%# <span class="nav-text">Contact Me</span> %>
+      <%# </a> %>
+      <%# </li> %>
     </ul>
   </div>
 </nav>
