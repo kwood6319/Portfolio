@@ -23,7 +23,9 @@
     <!-- EXTRA INFO -->
     <div class="project-extra">
       <p><strong>Team Size:</strong> <%= @project.team_size %></p>
-      <p><strong>Role:</strong> <%= @project.role %></p>
+      <% if @project.role != "" %>
+        <p><strong>Role:</strong> <%= @project.role %></p>
+      <% end %>
     </div>
     <p class="project-description">
       <%= @project.description %>
