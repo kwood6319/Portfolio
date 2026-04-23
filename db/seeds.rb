@@ -7,14 +7,14 @@ puts "#{Project.count} projects remaining in DB."
 
 ganba = Project.create!(
   title_en: "GanbaAI",
-  title_jp: "GanbaAI",
+  title_ja: "GanbaAI",
   description_en: "An AI-driven JLPT practice test generator",
   description_ja: "AIを活用したJLPT模擬試験生成ツール",
   link: "https://github.com/kwood6319/GanbaAi",
   skills: ["Rails", "Stimulus", "SCSS", "HTML", "PostgreSQL", "Gemini", "Cloudinary", "Wicked"],
   team_size: 4,
   role_en: "",
-  role_jp: "",
+  role_ja: "",
   image: "GanbaAI.jpg"
 )
 
@@ -33,7 +33,7 @@ Stage.create!(
 
 Stage.create!(
   title_en: "Schema",
-  title_jp: "スキーマ設計",
+  title_ja: "スキーマ設計",
   description_en: "We only had two weeks to make this project so we focused on a simple structure.
     There would be a test with multiple questions (10 per test) separated into categories of Kanji, Vocabulary, Grammar, and Reading.
     In our schema we have decks and generated writing, but we didn't get around to implementing them.",
@@ -82,7 +82,7 @@ puts "-----------------------------------------------"
 
 connect = Project.create!(
   title_en: "connectPet",
-  title_jp: "connectPet",
+  title_ja: "connectPet",
   description_en: "A pet health management application",
   description_ja: "ペットの健康管理アプリ",
   link: "https://github.com/kwood6319/connectPet",
