@@ -5,10 +5,10 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="#projects">
+        <%= link_to "#{root_path(anchor: 'projects')}" do %>
           <i class="nav-icon fa-solid fa-code"></i>
           <span class="nav-text">Projects</span>
-        </a>
+        <% end %>
       </li>
       <li>
         <%= link_to "https://www.linkedin.com/in/katie-wood6319/", target: :_blank do %>
@@ -23,8 +23,17 @@
         <% end %>
       </li>
       <li>
-        <%= link_to "EN", url_for(locale: :en) %>
-        <%= link_to "日本語", url_for(locale: :ja)%>
+        <% if I18n.locale == :ja %>
+          <%= link_to url_for(locale: :en) do %>
+            <i class="nav-icon fa-solid fa-language"></i>
+            <span class="nav-text"> English </span>
+          <% end %>
+        <% else %>
+          <%= link_to url_for(locale: :ja) do %>
+            <i class="nav-icon fa-solid fa-language"></i>
+            <span class="nav-text"> 日本語 </span>
+          <% end %>
+        <% end %>
       </li>
       <%# <li> %>
       <%# <a href="#contact"> %>
@@ -34,4 +43,20 @@
       <%# </li> %>
     </ul>
   </div>
+  <div>
+    <% if I18n.locale == :ja %>
+      <div class="warning">
+        本サイトの日本語訳は現在調整中です。
+      </div>
+    <% end %>
+  </div>
 </nav>
+<style>
+  .warning {
+    background: #f8d7da;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+  }
+</style>
