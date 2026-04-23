@@ -4,10 +4,17 @@
       <%= image_tag "main pic.jpg", alt: "Katie", class: "profilepic mb-3" %>
     </div>
     <div class="header-text">
-      <h1>Katie Wood</h1>
-      <h2>Full Stack Developer</h2>
-      <p>I'm a Full Stack Developer based in Japan with a background in teaching.
-        I enjoy solving problems, building user-friendly applications, and continuously improving my skills.</p>
+      <% if I18n.locale == :ja%>
+        <h1>ウッド・ケイティー</h1>
+        <h2>フルスタックエンジニア</h2>
+        <p> 日本在住のフルスタックエンジニアで、教育分野での経験があります。
+          課題解決やユーザーフレンドリーなアプリケーションの開発にやりがいを感じており、継続的なスキル向上にも取り組んでいます。</p>
+      <% else %>
+        <h1>Katie Wood</h1>
+        <h2>Full Stack Developer</h2>
+        <p>I'm a Full Stack Developer based in Japan with a background in teaching.
+          I enjoy solving problems, building user-friendly applications, and continuously improving my skills.</p>
+      <% end %>
       <div class="skills">
         <span class="pill">Ruby</span>
         <span class="pill">Rails</span>
