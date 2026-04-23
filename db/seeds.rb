@@ -12,7 +12,7 @@ ganba = Project.create!(
   skills: ["Rails", "Stimulus", "SCSS", "HTML", "PostgreSQL", "Gemini", "Cloudinary", "Wicked"],
   team_size: 4,
   role: "",
-  image: "GanbaAi.jpg"
+  image: "GanbaAI.jpg"
 )
 
 Stage.create!(
@@ -30,7 +30,7 @@ Stage.create!(
     There would be a test with multiple questions (10 per test) separated into categories of Kanji, Vocabulary, Grammar, and Reading.
     In our schema we have decks and generated writing, but we didn't get around to implementing them.",
   project: ganba,
-  image: "GanbaAiSchema.jpg"
+  image: "GanbaAISchema.jpg"
 )
 
 Stage.create!(

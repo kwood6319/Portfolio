@@ -3,9 +3,8 @@
   <section class="project-header">
     <div class="header-image">
       <div class="project-image">
-        <% image_name = "#{@project.title}.jpg" %>
-        <% if asset_exists?(image_name) %>
-          <%= image_tag image_name %>
+        <% if asset_exists?(@project.image) %>
+          <%= image_tag "#{@project.image}" %>
         <% else %>
           <div class="image-placeholder">Image</div>
         <% end %>
@@ -39,9 +38,8 @@
         <div class="stage-content">
           <!-- IMAGE -->
           <div class="stage-image">
-            <% image_name = "#{@project.title}#{stage.title}.jpg" %>
-            <% if asset_exists?(image_name) %>
-              <%= image_tag image_name %>
+            <% if asset_exists?(stage.image) %>
+              <%= image_tag stage.image %>
             <% else %>
               <div class="image-placeholder">Image</div>
             <% end %>

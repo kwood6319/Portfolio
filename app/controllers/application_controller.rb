@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
   stale_when_importmap_changes
 
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    I18n.locale = extract_locale || I18n.default_locale
+  end
+
+  def extract_locale
+    locale = params[:locale]
+    %w[en ja].include?(locale) ? locale : nil
   end
 end
