@@ -12,8 +12,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-
-  resources :projects, only: [:show]
+  scope "(:locale)", locale: /en|ja/ do
+    resources :projects, only: [:show]
+  end
 
   post "/contact", to: "contacts#create"
 end
